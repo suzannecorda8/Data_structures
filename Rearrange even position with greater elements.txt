@@ -1,0 +1,24 @@
+//Rearrange array such that even positioned are greater than odd
+#include<bits/stdc++.h>
+using namespace std;
+void rearrange(int a[],int n){
+    int i;
+    sort(a,a+n);
+    int ans[n];
+    int o=0,b=n-1;
+    for(int i=0;i<n;i++){
+        if((i+1)%2==0)
+            ans[i]=a[b--];
+        else
+            ans[i]=a[o++];
+    }
+    for(int i=0;i<n;i++)  
+        printf("%d",ans[i]);
+
+}
+int main(){
+    int arr[]={1, 3, 2, 2, 5 };
+    int n=sizeof(arr)/sizeof(arr[0]);
+    rearrange(arr,n);
+    return 0;
+}
