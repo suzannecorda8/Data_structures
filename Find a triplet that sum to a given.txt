@@ -1,0 +1,23 @@
+// Find a triplet that sum to a given value
+#include<bits/stdc++.h>
+using namespace std;
+int triplets(int arr[], int n, int sum)
+{  
+    int i,j,k;
+    for(int i=0;i<n-2;i++){
+        for(int j=i+1;j<n-1;j++){
+            for(int k=j+1;k<n;k++){
+                if(arr[i]+arr[j]+arr[k]==sum){
+                cout<<"The triplet numbers are:"<<arr[i]<<","<<arr[j]<<","<<arr[k]<<endl;
+                }
+            }
+        }
+    }
+    return -1; //No triplets found
+}
+int main(){
+    int sum=6;
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    triplets(arr, n, sum);
+}
