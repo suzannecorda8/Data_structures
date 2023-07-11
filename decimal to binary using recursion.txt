@@ -1,0 +1,14 @@
+// decimal to binary using recursion
+#include<bits/stdc++.h>
+using namespace std;
+int binary(int decimal){
+    if (decimal==0)
+     return 0;
+    else
+      return (decimal% 2 + 10 * binary(decimal/2));//how it came did not understand
+}
+int main(){
+    int decimal=10;
+    cout<<binary(decimal);
+    return 0;
+}
